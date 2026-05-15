@@ -1,8 +1,10 @@
 [MAIN]
 
-diable=C0114, #missing-module-docstring
-C0115, #missing-class-docstring
-C0116, #missing-function-docstring
+[MESSAGES CONTROL]
+disable=
+    C0114,
+    C0115,
+    C0116
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
@@ -420,7 +422,6 @@ logging-format-style=old
 logging-modules=logging
 
 
-[MESSAGES CONTROL]
 
 # Only show warnings with the listed confidence levels. Leave empty to show
 # all. Valid levels: HIGH, CONTROL_FLOW, INFERENCE, INFERENCE_FAILURE,
