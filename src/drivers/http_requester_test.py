@@ -15,6 +15,6 @@ def test_request_from_page(requests_mock):
 
     http_requester = HttpRequester()
     request_response = http_requester.request_from_page()
-
+    print(request_response)
     assert request_response['status_code'] == status_code
     assert request_response['html_content'] == context_text
