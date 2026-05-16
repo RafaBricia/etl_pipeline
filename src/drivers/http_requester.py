@@ -1,9 +1,10 @@
 from typing import Dict, Any
 import requests
 from requests.exceptions import RequestException
+from .interfaces.http_requester_interface import HttpRequesterInterface
 
 
-class HttpRequester:
+class HttpRequester(HttpRequesterInterface):
     def __init__(self) -> None:
         self.__url = (
             "https://web.archive.org/web/20121007172955/https://www.nga.gov/collection/anZ1.htm"

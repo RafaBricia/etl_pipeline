@@ -1,11 +1,10 @@
 from typing import List, Dict
 from bs4 import BeautifulSoup
+from .interfaces.html_collector_interface import HtmlCollectorInterface
 
+class HtmlCollector(HtmlCollectorInterface):
 
-class HtmlCollector:
-
-    @classmethod
-    def collect_essencial_information(cls, html:str) -> List[Dict[str, str]]:
+    def collect_essencial_information(self, html:str) -> List[Dict[str, str]]:
         soup = BeautifulSoup(html, 'html.parser')
 
         artist_name_list = soup.find(class_='BodyText')
