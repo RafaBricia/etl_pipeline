@@ -1,7 +1,7 @@
 from collections import namedtuple
 
-ExtraxtContract = namedtuple(
-    'ExtraxtContract',
+ExtractContract = namedtuple(
+    'ExtractContract',
     '''
     raw_information_content
     extraction_date
